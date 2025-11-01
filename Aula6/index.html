@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador Maneiro</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        #contador {
+            font-size: 30px;
+            margin: 20px;
+            color: rgb(0, 132, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contador</h1>
+
+    <div id="contador">0</div>
+
+    <button id="btnSubitrair">Subitrair</button>
+    <button id="btnSomar">Somar</button>
+
+    <script>
+        let contador = 0;
+
+        const contadorDiv = document.getElementById('contador');
+
+        document.getElementById('btnSomar').addEventListener('click', function() {
+            contador++;
+            contadorDiv.innerText = contador;
+        });
+
+        document.getElementById('btnSubitrair').addEventListener('click', function() {
+            if (contador > 0) {
+                contador--;
+            }
+            contadorDiv.innerText = contador;
+        });
+    </script>
+
+</body>
+</html>
